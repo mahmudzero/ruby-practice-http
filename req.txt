@@ -1,0 +1,10 @@
+:params	      :update_param	:delete_param	      :ip	            :request_method	      :path_info	      :path_info=
+:user_agent	      :referrer	      :forwarded_authority	:post?	      :body	                  :values_at	      :authority
+:referer	      :query_string	:script_name=	      :session	      :content_length	      :session_options	:get?
+:options?	      :head?	      :patch?	            :link?	      :delete?	            :trace?	      :put?
+:server_authority	:content_type	:unlink?	            :xhr?	            :server_name	      :forwarded_port	:host_with_port
+:forwarded_for	:host_authority	:ssl?	                  :media_type	      :media_type_params	:content_charset	:form_data?
+:parseable_data?	:base_url	      :script_name	      :accept_language	:trusted_proxy?	      :accept_encoding	:server_port
+:host	            :hostname	      :cookies	            :url	            :scheme	            :port	            :GET
+:POST	            :path	            :fullpath	            :logger	      :get_header	            :fetch_header	:each_header
+:has_header?	:set_header	      :add_header	            :delete_header	:env
