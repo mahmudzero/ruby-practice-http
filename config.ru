@@ -1,5 +1,6 @@
 require 'debug'
 require 'httparty'
+require 'json'
 
 class PokemonClient
   include HTTParty
@@ -14,8 +15,10 @@ class PokemonClient
     case req.request_method
     when 'GET'
       return 200, { 'content-type' => 'json' }, get_pokemon(req.params['pokemon']).body
+    when 'POST'
+      return 400, { 'method-not-supported' => 'true' }, "Post not supported, body: #{JSON.parse(req.body.read)}"
     else
-      return 400, { 'invalid-methdo' => 'true' }, "Invalid Method #{req.request_method} for /pokemon"
+      return 400, { 'invalid-method' => 'true' }, "Invalid Method #{req.request_method} for /pokemon"
     end
   end
 
