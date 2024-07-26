@@ -3,7 +3,7 @@ require 'webrick'
 require 'json'
 require 'cgi'
 
-DO_BREAK = true
+DO_BREAK = false
 
 # req.body to get PUT/POST body
 # req.header for headers
@@ -25,6 +25,8 @@ class EEServer < WEBrick::HTTPServlet::AbstractServlet
 
     res.status = 200
     res['Content-Type'] = 'application/json'
+    res['Custom-Header-MAHMUD'] = 'true'
+    res['lower-case-header-mahmud'] = 'true'
     res.body = { method: 'get' }.to_json
   end
 
